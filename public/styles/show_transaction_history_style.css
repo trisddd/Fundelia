@@ -1,0 +1,297 @@
+    main{
+        width: 90%;
+        margin-left: 110px;
+        margin-top: 5px;
+    }
+
+
+    .header-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        flex-wrap: wrap; 
+        gap: 15px;
+    }
+
+    .header-section h1 {
+        margin: 0;
+        color: #186ed1;
+        font-size: 2em;
+    }
+
+    .filter-sidebar {
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        border: 1px solid #e0e0e0;
+        transition: box-shadow 0.3s ease-in-out;
+        width: 100%;
+        max-width: 250px; 
+        min-width: 200px; 
+        box-sizing: border-box; 
+    }
+
+    .filter-sidebar:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .sort-options {
+        display: flex;
+        flex-direction: column; 
+        gap: 8px;
+        align-items: stretch;
+        background-color: transparent;
+        border-radius: 0; 
+        box-shadow: none; 
+        padding: 0;
+    }
+
+    .sort-options h3 {
+        margin: 0 0 10px 0;
+        color: #333;
+        font-size: 1em;
+        text-align: center; 
+        width: 100%; 
+    }
+
+    .sort-options a {
+        padding: 8px 12px; 
+        border: 1px solid #186ed1;
+        border-radius: 5px;
+        background-color: #186ed1;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+        font-size: 0.9em;
+        white-space: nowrap;
+        text-align: center; 
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+
+    .sort-options a:hover {
+        background-color: #155aa8;
+        border-color: #155aa8;
+    }
+
+    .sort-options a.active {
+        background-color: #0c3e72;
+        border-color: #0c3e72;
+    }
+
+
+    .main-layout {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        flex-wrap: wrap;
+        align-items: stretch; 
+    }
+
+    .transaction-display-area {
+        display: flex;
+        flex-direction: row;
+        flex: 1; 
+        min-width: 320px;
+        max-width: 1100px;
+        gap: 20px;
+    }
+
+    .tab-navigation {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0; 
+        gap: 60px;
+        width: 100%; 
+    }
+
+    .tab-button {
+        background-color: #e0e9f6;
+        color: #186ed1;
+        padding: 10px 20px;
+        border: 1px solid #186ed1;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        gap: 8px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-size: 1.1em;
+    }
+
+    .tab-button:hover {
+        background-color: #cddcf2;
+    }
+
+    .tab-button.active {
+        background-color: #186ed1;
+        color: white;
+    }
+
+    .tab-button .arrow {
+        font-size: 1.2em;
+        line-height: 1;
+    }
+
+    .tab-content {
+        width: 100%; 
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        border: 1px solid #e0e0e0;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .tab-content:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .hidden {
+        display: none;
+    }
+    h2 {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .column h2 {
+        color: #186ed1;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 1.5em;
+    }
+
+    .column h2.incomes {
+        color: #33DE58;
+    }
+
+    .date-group {
+        margin-bottom: 15px;
+    }
+
+    .date-group h3 {
+        color: rgb(0, 0, 0);
+        margin-bottom: 8px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 3px;
+        font-size: 1.1em;
+    }
+
+    .transaction-line {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 10px;
+        margin-bottom: 3px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-size: 0.9em;
+        height: 3vh;
+        align-items: center;
+    }
+
+    .transaction-line span {
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .transaction-line span:nth-child(1) {
+        flex: 2;
+    }
+
+    .transaction-line time,
+    .transaction-line span:nth-child(2) {
+        flex: 1;
+        text-align: center;
+    }
+
+    .transaction-line span:nth-child(3) {
+        flex: 1;
+        text-align: right;
+    }
+
+    .transaction-line-depense {
+        background: rgba(16, 106, 208, 0.2);
+    }
+
+    .transaction-line-depense:hover {
+        background: #186ed1;
+        color: white;
+    }
+
+    .transaction-line-entre {
+        background: rgba(51, 222, 88, 0.2);
+    }
+
+    .transaction-line-entre:hover {
+        background: rgb(77, 183, 101);
+        color: white;
+    }
+    .popup {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .popup-content {
+        background: white;
+        padding: 20px 30px;
+        border-radius: 10px;
+        max-width: 400px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+
+    .popup-content button {
+        margin-top: 15px;
+        padding: 8px 15px;
+        background-color: #1f5fbf;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .label-btn {
+    display: inline-block;
+    margin: 6px;
+    padding: 8px 14px;
+    background-color: #186ed1;
+    color: #333;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+    }
+
+    .label-btn:hover {
+    background-color: #0a3260;
+    color: #000;
+    }
+
+    .label-btn-popup {
+        margin: 3px 5px 0 0;
+        padding: 4px 10px;
+        background-color: #e0e0e0;
+        border: none;
+        border-radius: 14px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: background-color 0.2s;
+    }

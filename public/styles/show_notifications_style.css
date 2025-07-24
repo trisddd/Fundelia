@@ -1,0 +1,163 @@
+.title {
+  text-align: center;
+  color: #2673c9;
+  margin-bottom: 30px;
+}
+
+.notification-group {
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.notification-date {
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.notification-content {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.notification-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-avatar img {
+  width: 30px;
+  height: 30px;
+}
+
+.notification-avatar.black {
+  background-color: black;
+}
+
+.notification-bubbles {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.no-notifications {
+  text-align: center;
+  margin-top: 20px;
+  font-style: italic;
+  color: #888;
+}
+
+.bubble {
+  border-radius: 20px;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bubble.light {
+  background-color: #f4f4f4;
+}
+
+.bubble.blue {
+  background-color: #498fe0;
+}
+
+.bubble.blue {
+  background-color: #78aee6;
+  color: white;
+}
+/* MODAL */
+/* MODAL STYLING – version améliorée */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease-out;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.modal h2 {
+  color: #2673c9;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.modal p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+.notification-avatar.read {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.notification-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #186ed1;
+  flex-shrink: 0;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

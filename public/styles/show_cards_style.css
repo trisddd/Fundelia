@@ -1,0 +1,510 @@
+    main {
+        width: 90%;
+        margin-left: 110px;
+        margin-top: 5px;
+    }
+
+    /* Form Styles */
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    form label {
+        font-weight: bold;
+        color: #555;
+    }
+
+    form select,
+    form button {
+        padding: 10px 15px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        font-size: 1em;
+    }
+
+    form select {
+        flex-grow: 1;
+        background-color: #f9f9f9;
+        cursor: pointer;
+    }
+
+    form button {
+        background-color: #186ED1;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Card Display Section */
+    .card-display {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        justify-content: center;
+    }
+
+    /* Individual Card and Settings Wrapper */
+    .card-and-settings {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .card-and-settings:hover {
+        transform: translateY(-5px);
+    }
+
+    .carte-bancaire {
+        width: 280px;
+        height: 175px;
+        perspective: 1000px;
+        margin: 0 auto;
+        font-family: 'Space Mono', monospace;
+        position: relative;
+    }
+
+    /* Card Type Overlay */
+    .carte-bancaire strong {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 3px 8px;
+        border-radius: 5px;
+        font-size: 0.8em;
+        z-index: 10;
+    }
+
+    .carte-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transform-style: preserve-3d;
+    }
+
+    .carte-bancaire.flipped .carte-inner {
+        transform: rotateY(180deg);
+    }
+
+    .carte-front,
+    .carte-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+        box-sizing: border-box;
+        padding: 20px;
+        color: #fff;
+        background: linear-gradient(45deg, #2c3e50, #34495e);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    .carte-front::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.15) 40%,
+                rgba(255, 255, 255, 0.25) 50%,
+                rgba(255, 255, 255, 0.15) 60%,
+                rgba(255, 255, 255, 0) 100%);
+        opacity: 0.8;
+        pointer-events: none;
+        border-radius: 12px;
+    }
+
+
+    /* Card Chip */
+    .carte-puce {
+        width: 45px;
+        height: 35px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carte-puce img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .carte-logo {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        width: 20px;
+        height: auto;
+        opacity: 0.9;
+    }
+
+    .carte-logo img {
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    }
+
+    /* Card number styling */
+    .carte-numero {
+        font-family: 'Space Mono', monospace;
+        font-size: 22px;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+
+    /* Cardholder information and expiration date */
+    .carte-informations {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        font-size: 12px;
+        line-height: 1.4;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .carte-informations .label {
+        opacity: 0.7;
+        font-size: 10px;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .carte-informations .valeur {
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .carte-back {
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: linear-gradient(45deg, #2c3e50, #34495e);
+        padding-top: 20px;
+    }
+
+    /* Black magnetic stripe */
+    .bande-magnetique {
+        width: 100%;
+        height: 40px;
+        background-color: #000;
+        margin-bottom: 25px;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    /* CVC section */
+    .cvc-section {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 15px;
+        padding-right: 15px;
+    }
+
+    .cvc-section .label {
+        font-size: 10px;
+        opacity: 0.7;
+        margin-bottom: 5px;
+    }
+
+    .cvc-valeur {
+        width: 85%;
+        background-color: #f0f0f0;
+        color: #333;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-family: 'Space Mono', monospace;
+        font-size: 16px;
+        letter-spacing: 1.2px;
+        text-align: right;
+        box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Small logo on the bottom right of the back face */
+    .carte-logo-petit {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: auto;
+        opacity: 0.7;
+    }
+
+    .carte-logo-petit img {
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.4));
+    }
+
+
+    .carte-bancaire.gold .carte-front,
+    .carte-bancaire.gold .carte-back {
+        background: linear-gradient(45deg, #d4af37, #f7d781);
+        color: #333;
+    }
+
+    .carte-bancaire.gold .carte-logo img,
+    .carte-bancaire.gold .carte-logo-petit img {
+        filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3)) invert(1);
+    }
+
+    .carte-bancaire.gold .carte-numero,
+    .carte-bancaire.gold .carte-informations {
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+    }
+
+    .carte-bancaire.dark .carte-front,
+    .carte-bancaire.dark .carte-back {
+        background: linear-gradient(45deg, #1a1a1a, #333333);
+        color: #eee;
+    }
+
+    .carte-bancaire.dark .carte-logo img,
+    .carte-bancaire.dark .carte-logo-petit img {
+        filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5)) invert(1);
+    }
+
+    .carte-bancaire:hover .carte-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-settings-1 {
+        display: flex;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background-color: #fcfcfc;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .card-settings-1 a,
+    .card-settings-1 img.settings-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        cursor: pointer;
+        background-color: #f0f0f0;
+    }
+
+    .card-settings-1 a:hover,
+    .card-settings-1 img.settings-img:hover {
+        background-color: #e6e6e6;
+        transform: translateY(-2px);
+    }
+
+    .card-settings-1 img {
+        height: 24px;
+        width: 24px;
+        object-fit: contain;
+    }
+
+    .add-card {
+        border: 2px dashed #a0a0a0;
+        border-radius: 10px;
+        width: 280px;
+        height: 175px;
+        background-color: #f8f8f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .add-card:hover {
+        background-color: #eef2f5;
+        border-color: #007bff;
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .add-card a {
+        text-decoration: none;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .add-card a img {
+        max-width: 60px;
+        max-height: 60px;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+
+    .add-card:hover a img {
+        opacity: 1;
+    }
+
+    .card-settings-2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        background-color: white;
+        margin-top: 30px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        gap: 20px;
+    }
+
+    .card-settings-2_1 {
+        flex: 1;
+        min-width: 200px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #666;
+        font-style: italic;
+        min-height: 120px;
+    }
+
+    .card-settings-2-history {
+        flex: 2;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-settings-2-history h3 {
+        margin-top: 0;
+        color: #333;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+
+    .history-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        margin-bottom: 8px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        transition: background 0.3s ease, transform 0.2s ease;
+        font-size: 0.95em;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        border: 1px solid #eee;
+    }
+
+    .history-info:hover {
+        background-color: #eef5fc;
+        transform: translateY(-2px);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .history-info span {
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #444;
+    }
+
+    .history-info span:nth-child(1) {
+        flex: 2;
+        font-weight: bold;
+    }
+
+    .history-info span:nth-child(2) {
+        flex: 1;
+        text-align: right;
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+
+        .card-display,
+        .card-settings-2 {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .carte-bancaire,
+        .add-card,
+        .card-settings-1,
+        .card-settings-2_1,
+        .card-settings-2-history {
+            width: 100%;
+            max-width: 320px;
+        }
+    }
+
+    .copy-btn {
+        margin-top: 10px;
+        padding: 6px 12px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .copy-btn:hover {
+        background-color: #45a049;
+    }

@@ -1,0 +1,14 @@
+.add-employee-button {
+    margin-left: 0.5rem;
+    padding: 6px 12px;
+    border: none;
+    background-color: #186ED1;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.add-employee-link {
+    position: absolute;
+    right: 30px;
+}

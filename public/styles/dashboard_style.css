@@ -1,0 +1,333 @@
+.welcome {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.card {
+  height: 180px;
+}
+.balance-summary {
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+  border-radius: 16px;
+  padding: 1.5rem;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.bubble-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.notifications-number {
+  margin-left: 10px;
+  font-size: 0.75rem;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #186ed1;
+  border-radius: 50px;
+}
+.notifications-title {
+  margin-left: 5px;
+}
+
+.label {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 1px;
+  color: #186ed1;
+}
+
+/* Style général des bulles */
+.balance-bubble {
+  flex: 1;
+  padding: 0.1rem 0.2rem;
+  border-radius: 16px;
+  background-color: #dbe9fc; /* bleu clair neutre */
+  box-shadow: 0 2px 8px rgba(24, 110, 209, 0.15); /* ombre légère bleue */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.balance-bubble .label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 1px;
+  color: #186ed1;
+}
+
+.balance-bubble .amount {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #0a3c7f;
+  display: flex;
+  align-items: center;
+}
+
+/* Bulles des comptes courant & épargne (plus sobres) */
+.balance-bubble:not(.total) {
+  background-color: #f0f5fb; /* fond plus clair et neutre */
+  box-shadow: 0 1px 5px rgba(24, 110, 209, 0.1);
+  color: #5a7bbf;
+}
+
+/* Bulles des comptes courant & épargne - texte */
+.balance-bubble:not(.total) .label {
+  color: #5a7bbf;
+}
+
+.balance-bubble:not(.total) .amount {
+  color: #375a9f;
+}
+
+/* Bulle du solde total - plus marquée */
+.balance-bubble.total {
+  background: linear-gradient(135deg, #186ed1, #0e56c0);
+  color: white;
+  box-shadow: 0 6px 20px rgba(24, 110, 209, 0.5);
+}
+
+.balance-bubble.total .label,
+.balance-bubble.total .amount {
+  color: white;
+}
+
+.balance-bubble.total .currency-icon svg {
+  fill: white;
+}
+
+
+.currency-icon svg {
+  width: 1rem;             /* Taille relative au texte */
+  height: 1rem;
+  vertical-align: middle;   /* Centre verticalement avec le texte */
+  margin-left: 4px;         /* Petit espace entre chiffre et icône */
+  display: inline-block;
+  transform: translateY(-1.8px);
+}
+
+#totalBalance .currency-icon .svg {
+  width: 1rem;             /* Taille relative au texte */
+  height: 1rem;
+}
+
+#currentAccount currency-icon svg {
+  width: 0.8rem;             /* Taille relative au texte */
+  height: 0.8rem;
+}
+#savingsAccount currency-icon svg {
+  width: 0.8rem;             /* Taille relative au texte */
+  height: 0.8rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.2rem;
+}
+
+.chart-box {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 16px;
+  position: relative;
+}
+
+canvas {
+  max-height: 230px;
+  max-width: 800px;
+}
+
+.small-chart {
+  max-height: 80px !important;
+}
+
+.transaction-history {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: 180px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+.transaction-header {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #186ed1;
+}
+
+.transaction-header span {
+  margin-left: 10px;
+}
+
+.icon-history {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.transaction-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.transaction-bubble {
+  background-color: #e1ecfb;
+  border-radius: 12px;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #0d3b82;
+}
+
+.transaction-name {
+  flex: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.transaction-time {
+  flex: 1;
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.75rem;
+}
+
+.transaction-amount {
+  flex: 1;
+  text-align: right;
+  font-weight: 600;
+}
+
+.transaction-amount.positive {
+  color: #16a34a;
+}
+
+.transaction-amount.negative {
+  color: #dc2626;
+}
+
+.notifications-preview {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: 180px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #111827;
+  position: relative;
+}
+
+.notifications-header {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #186ed1;
+}
+
+.icon-bell {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.notification-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.notification-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #186ed1;
+  flex-shrink: 0;
+}
+
+.notification-bubble {
+  background-color: #e1ecfb;
+  color: #0d3b82;
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  flex: 1;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.notification-read {
+  background-color: #f4f4f4;
+  color: black;
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  flex: 1;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.overlay-disabled {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.6); /* couche blanche semi-transparente */
+  backdrop-filter: blur(2px); /* flou léger */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #186ed1;
+  font-size: 1rem;
+  pointer-events: none; /* laisse passer les clics si besoin */
+  z-index: 10;
+}

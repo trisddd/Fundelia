@@ -1,0 +1,28 @@
+{
+  "name": "Fundelia",
+  "short_name": "Fundelia",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#186ED1",
+  "background_color": "#FFFFFF",
+  "lang": "fr",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/public/icons/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/public/icons/logo.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/public/icons/logo.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ]
+}

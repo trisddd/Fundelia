@@ -1,0 +1,20 @@
+ErrorDocument 403 /?go=error_404
+ErrorDocument 404 /?go=error_404
+
+RewriteEngine On
+
+# Allow access to index, /, and public directory explicitly
+RewriteCond %{REQUEST_URI} ^/$ [OR]
+RewriteCond %{REQUEST_URI} ^/index\.php$ [OR]
+RewriteCond %{REQUEST_URI} ^/fruit_corporation(/.*)?$ [OR]
+RewriteCond %{REQUEST_URI} ^/public(/.*)?$ [NC]
+RewriteRule ^ - [L]
+
+# Rewrite clean URLs like /page(/index) to index with the query ?go=page(&index=index)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_%~.\-+çÇáéíóúÁÉÍÓÚñÑüÜ]+)(?:/([a-zA-Z0-9_%~.\-+çÇáéíóúÁÉÍÓÚñÑüÜ]+))?$ ?go=$1&index=$2 [QSA,L]
+
+
+# For everything else, forbid access
+RewriteRule ^ - [F,L]

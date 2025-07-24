@@ -1,0 +1,117 @@
+main {
+  overflow: visible;
+  margin-left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  height: auto;
+  max-height: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Baloo 2", sans-serif;
+}
+
+.card-creation-form {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.05),
+    inset 0 0 0 1px rgba(148, 163, 184, 0.1);
+  width: 320px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transform: scale(1.1);
+}
+
+.card-creation-form h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 24px 0;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.form-group input[type="text"],
+.form-group select {
+  height: 40px;
+  padding: 0 12px;
+  font-size: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #1e293b;
+  transition: all 0.2s ease;
+  appearance: none; /* pour select */
+}
+
+.form-group input[type="text"]::placeholder {
+  color: #64748b;
+}
+
+.form-group input[type="text"]:hover,
+.form-group select:hover {
+  border-color: #cbd5e1;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #186ed1;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.submit-button {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  background: #186ed1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  font-family: "Baloo 2", sans-serif;
+}
+
+.submit-button:hover {
+  background: #1558a5;
+  transform: translateY(-1px);
+  box-shadow:
+    0 4px 12px rgba(59, 130, 246, 0.25),
+    0 2px 4px rgba(59, 130, 246, 0.15);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}

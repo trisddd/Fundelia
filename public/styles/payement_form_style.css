@@ -1,0 +1,119 @@
+:root {
+  --fundelia-blue: #0d47a1;
+  --fundelia-blue-light: #1565c0;
+  --bg-light: #f4f8fb;
+  --text-dark: #333;
+}
+
+main {
+  margin-left: 0px;
+  width: auto;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+  margin-left: 0 !important;
+}
+
+.fundelia-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #0d47a1;
+  font-family: 'Baloo 2', sans-serif;
+}
+
+.fundelia-logo img {
+  height: 40px;
+  width: auto;
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: auto;
+  height: auto;
+  padding: 0;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.payment-box {
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 450px;
+}
+
+.payment-box h1 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: var(--fundelia-blue);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--fundelia-blue);
+  font-weight: 600;
+}
+
+.form input[type="text"],
+.form input[type="date"] {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.form input:focus {
+  border-color: var(--fundelia-blue-light);
+  outline: none;
+}
+
+.form p {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  background: #eef4ff;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.form button {
+  background: var(--fundelia-blue);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form button:hover {
+  background: var(--fundelia-blue-light);
+}
+
+@media (max-width: 480px) {
+  .payment-box {
+    padding: 1.5rem;
+  }
+}

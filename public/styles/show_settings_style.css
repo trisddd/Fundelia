@@ -1,0 +1,31 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.card {
+    padding: 20px;
+}
+.btn-disconnect {
+    font-size: 1.5rem;
+    padding: 6px 12px;
+    border: none;
+    background-color: #186ED1;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-disconnect:hover {
+    background-color:rgb(19, 85, 161);
+}
+
+h1 {
+    color: #186ed1;
+    text-align: center;
+    margin-bottom: 10%;
+    font-size: 2.5em;
+    font-weight: bold;
+}

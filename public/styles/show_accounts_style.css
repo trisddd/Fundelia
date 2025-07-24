@@ -1,0 +1,184 @@
+body {
+  font-family: 'Baloo 2', sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 20px;
+  color: #2e2e2e;
+  position: relative;
+}
+
+.container {
+  width: 50%;
+  height: fit-content;
+  max-width: 21cm;
+  margin: auto;
+  position: relative;
+}
+
+main .top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+main .top-bar a {
+  text-decoration: none;
+}
+
+main h1 {
+  color: #186ed1;
+  font-size: 26px;
+  margin: 0 auto;
+  text-align: center;
+  flex: 1;
+}
+
+main .top-button {
+  background-color: #ffffff;
+  border: 2px solid #186ed1;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+
+main .top-button:hover {
+  background-color: #186ed1;
+}
+
+main .top-button:hover .add-icon {
+  stroke: #fff;
+}
+
+.total {
+  background: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+  padding: 25px 16px;
+  margin: 20px auto;
+  max-width: 21cm;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .total p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+main .amount {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2ecc71;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  margin-bottom: 15px; 
+}
+
+main .amount img {
+  width: 16px;
+  height: 16px;
+}
+
+.currency-icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 6px;
+  vertical-align: middle;
+  transform: translateY(-1.5px);
+}
+
+main .eye-icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #555;
+}
+
+main .card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+section {
+  margin-top: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+main .section-title {
+  background: #186ed1;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+main .item-card {
+  background: #f5f8fc;
+  margin: 10px 20px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+main .item-card:hover {
+  transform: translateX(5px);
+}
+
+main .value {
+  font-weight: bold;
+  color: #2ecc71;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+main .account-name {
+  color: #2e2e2e;
+}
+
+main .negative {
+  color: rgb(209, 45, 45);
+}
+
+/* main .subnote {
+  font-size: 13px;
+  color: #2d9bd1;
+  margin-left: 20px;
+  margin-top: 4px;
+} */
+.accounts-container {
+  width: 100%;
+}
